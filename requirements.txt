@@ -1,0 +1,10 @@
+deep_translator>=1.11.4
+gTTS>=2.5.1
+google-generativeai>=0.4.0
+google-genai>=1.0.0
+opencv_python>=4.9.0.80
+pygame>=2.5.2
+python-dotenv>=1.0.1
+requests>=2.31.0
+sounddevice>=0.4.6
+numpy>=1.24.0

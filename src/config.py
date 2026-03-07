@@ -27,6 +27,14 @@ class Config:
     GEMINI_API_KEY = os.getenv('GEMINI_API_KEY')
     CHAT_MODEL = os.getenv('CHAT_MODEL', 'gemini-2.0-flash')
 
+    # --- Gemini Live API Settings ---
+    USE_LIVE_API = int(os.getenv('USE_LIVE_API', '0')) == 1
+    LIVE_MODEL = os.getenv('LIVE_MODEL', 'gemini-2.0-flash-live-001')
+    LIVE_VOICE_NAME = os.getenv('LIVE_VOICE_NAME', 'Puck')
+    LIVE_RESPONSE_MODALITY = os.getenv('LIVE_RESPONSE_MODALITY', 'AUDIO')
+    LIVE_MODE = os.getenv('LIVE_MODE', 'text_to_audio')  # text_to_text, text_to_audio, mic_live
+    LIVE_AUDIO_OUTPUT_PATH = BASE_DIR / "res/sound/live_output.wav"
+
     # --- Translation Settings ---
     ENABLE_TRANSLATOR = int(os.getenv('TRANSLATOR', '0')) == 1
     USER_LANG = os.getenv('USER_LANG_TRANSLATE', 'en')
